@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drug Awareness Assignment - Vansh</title>
+    <style>
+        /* CSS: Professional Styling */
+        :root {
+            --primary: #c0392b; /* Deep Red for Alert/Danger */
+            --dark: #2c3e50;
+            --light: #ecf0f1;
+            --accent: #e74c3c;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', sans-serif; }
+        body { background-color: var(--light); display: flex; height: 100vh; overflow: hidden; }
+
+        /* Sidebar Navigation */
+        nav { width: 260px; background: var(--dark); color: white; padding: 20px; display: flex; flex-direction: column; }
+        nav h2 { font-size: 1.2rem; margin-bottom: 30px; color: var(--accent); border-bottom: 2px solid var(--accent); padding-bottom: 10px; }
+        .nav-item { padding: 12px; cursor: pointer; border-radius: 5px; transition: 0.3s; margin-bottom: 5px; list-style: none; }
+        .nav-item:hover, .nav-item.active { background: var(--primary); }
+
+        /* Main Display Area */
+        main { flex: 1; padding: 40px; overflow-y: auto; display: flex; align-items: center; justify-content: center; }
+        .slide { display: none; width: 100%; max-width: 900px; animation: fadeIn 0.6s ease; }
+        .slide.active { display: block; }
+        
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+
+        /* Student Info Header */
+        .student-header { background: white; padding: 20px; border-radius: 10px; border-left: 8px solid var(--primary); box-shadow: 0 4px 15px rgba(0,0,0,0.1); margin-bottom: 30px; }
+        .student-header h3 { color: var(--primary); margin-bottom: 5px; }
+        
+        /* Content Elements */
+        h1 { font-size: 3rem; color: var(--dark); margin-bottom: 20px; }
+        p { font-size: 1.1rem; line-height: 1.6; color: #555; margin-bottom: 15px; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; margin-top: 20px; }
+        .card { background: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.05); border-top: 4px solid var(--primary); }
+        .card h4 { color: var(--primary); margin-bottom: 10px; }
+        ul { margin-left: 20px; color: #555; }
+        li { margin-bottom: 10px; }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <h2>PRESENTATION</h2>
+        <ul>
+            <li class="nav-item active" onclick="changeSlide(0)">Home / Student Info</li>
+            <li class="nav-item" onclick="changeSlide(1)">What is Drug Abuse?</li>
+            <li class="nav-item" onclick="changeSlide(2)">Major Causes</li>
+            <li class="nav-item" onclick="changeSlide(3)">Health Hazards</li>
+            <li class="nav-item" onclick="changeSlide(4)">Conclusion</li>
+        </ul>
+    </nav>
+
+    <main>
+        <!-- SLIDE 0: HOME & STUDENT DETAILS -->
+        <section class="slide active">
+            <div class="student-header">
+                <h3>SUBMITTED BY:</h3>
+                <p><strong>NAME:</strong> VANSH</p>
+                <p><strong>ROLL NO:</strong> 264</p>
+                <p><strong>COLLEGE:</strong> D.A.V. COLLEGE, PEHOWA</p>
+            </div>
+            <h1>Drug Abuse: A Threat to Humanity</h1>
+            <p>Welcome to this assignment presentation on the dangers of substance abuse and its impact on the younger generation.</p>
+        </section>
+
+        <!-- SLIDE 1: INTRODUCTION -->
+        <section class="slide">
+            <h1>What is Drug Abuse?</h1>
+            <div class="card">
+                <p>Drug abuse is the habitual use of addictive substances, such as alcohol, nicotine, or illicit drugs, for purposes other than medical reasons.</p>
+                <p>It involves a pattern of use that leads to significant impairment or distress, eventually affecting brain function and behavior.</p>
+            </div>
+        </section>
+
+        <!-- SLIDE 2: CAUSES -->
+        <section class="slide">
+            <h1>Common Causes</h1>
+            <div class="grid">
+                <div class="card">
+                    <h4>Peer Pressure</h4>
+                    <p>The desire to fit in with social circles often leads students to experiment with drugs for the first time.</p>
+                </div>
+                <div class="card">
+                    <h4>Stress & Anxiety</h4>
+                    <p>Academic pressure or personal stress can lead individuals to use drugs as a coping mechanism.</p>
+                </div>
+                <div class="card">
+                    <h4>Curiosity</h4>
+                    <p>Exposure via media or surroundings creates a false sense of adventure regarding substance use.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- SLIDE 3: HEALTH RISKS -->
+        <section class="slide">
+            <h1>Danger to Health</h1>
+            <ul>
+                <li><strong>Brain Damage:</strong> Long-term use alters the brain's reward system, leading to memory loss and impaired judgment.</li>
+                <li><strong>Organ Failure:</strong> Serious damage to the liver (cirrhosis), heart (hypertension), and kidneys.</li>
+                <li><strong>Mental Health:</strong> Increased risk of chronic depression, anxiety, and psychosis.</li>
+                <li><strong>Infections:</strong> Higher risk of HIV and Hepatitis C due to shared needles or risky behaviors.</li>
+            </ul>
+        </section>
+
+        <!-- SLIDE 4: CONCLUSION -->
+        <section class="slide">
+            <h1>Conclusion</h1>
+            <div class="card" style="border-left: 10px solid var(--primary); border-top: none;">
+                <p>Drug addiction is a silent killer that destroys the individual, their family, and the community.</p>
+                <p><strong>Prevention is the only cure.</strong> Through education and early awareness at institutions like D.A.V. College, we can build a drug-free society.</p>
+            </div>
+            <h2 style="margin-top: 30px; color: var(--primary); text-align: center;">Choose Life, Not Drugs!</h2>
+        </section>
+    </main>
+
+    <script>
+        // JavaScript: Slide Navigation Logic
+        function changeSlide(index) {
+            // Remove active class from all slides and nav items
+            const slides = document.querySelectorAll('.slide');
+            const navItems = document.querySelectorAll('.nav-item');
+            
+            slides.forEach(s => s.classList.remove('active'));
+            navItems.forEach(n => n.classList.remove('active'));
+
+            // Show selected slide and highlight nav item
+            slides[index].classList.add('active');
+            navItems[index].classList.add('active');
+        }
+    </script>
+</body>
+</html>
+<link rel="stylesheet" href="great.css">
+<script src="script.js"></script>
+
